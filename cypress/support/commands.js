@@ -1,4 +1,4 @@
-Cypress.Commands.add('search', term => {
+Cypress.Commands.add('search01', term => {
   cy.get('input[type="text"]')
     .should('be.visible')
     .clear()
@@ -16,4 +16,11 @@ Cypress.Commands.add('randomlyTogglePurchaseAgreement', () => {
     cy.get('#agree')
       .click()
   }
+})
+
+Cypress.Commands.add('search', term => {
+  cy.get('textarea[type="search"]')
+    .should('be.visible')
+    .type(`${term}{enter}`)
+  cy.wait(1000)
 })
