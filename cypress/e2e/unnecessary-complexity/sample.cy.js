@@ -21,3 +21,4 @@ describe('Unnecessary complexity bad practice', () => {
     })
   })
 })
+
